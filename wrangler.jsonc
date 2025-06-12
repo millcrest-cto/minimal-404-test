@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tyton-website",
+  "name": "404-website",
   "main": "./dist/_worker.js/index.js",
   "compatibility_date": "2025-03-25",
   "compatibility_flags": ["nodejs_compat"],
