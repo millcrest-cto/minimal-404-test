@@ -1,0 +1,76 @@
+media:
+  input: public
+  output: /
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: src/content/blog
+    filter: 
+      field: type
+      value: article
+    view:
+      fields: [ title, draft, pubDatetime ]
+    fields:
+      - { name: type, label: Content Type, type: string, hidden: true, default: "article" }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: author, label: Author, type: string, required: true }
+      - { name: pubDatetime, label: Publish Date, type: date, required: true }
+      - { name: modDatetime, label: Modified Date, type: date }
+      - { name: category, label: Category, type: string }
+      - { name: image, label: Featured Image, type: string }
+      - { name: excerpt, label: Excerpt, type: string }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: featured, label: Featured, type: boolean, default: false }
+      - { name: draft, label: Draft, type: boolean, default: false }
+      - { name: body, label: Body, type: rich-text }
+
+  - name: videos
+    label: Videos
+    type: collection
+    path: src/content/blog
+    filter: 
+      field: type
+      value: video
+    view:
+      fields: [ title, draft, pubDatetime ]
+    fields:
+      - { name: type, label: Content Type, type: string, hidden: true, default: "video" }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: author, label: Author, type: string, required: true }
+      - { name: pubDatetime, label: Publish Date, type: date, required: true }
+      - { name: modDatetime, label: Modified Date, type: date }
+      - { name: category, label: Category, type: string }
+      - { name: thumbnail, label: Video Thumbnail, type: string }
+      - { name: duration, label: Duration, type: string, hint: "Format: 5:30" }
+      - { name: videoUrl, label: Video URL, type: string }
+      - { name: excerpt, label: Excerpt, type: string }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: featured, label: Featured, type: boolean, default: false }
+      - { name: draft, label: Draft, type: boolean, default: false }
+      - { name: body, label: Body, type: rich-text }
+
+  - name: case-studies
+    label: Case Studies
+    type: collection
+    path: src/content/blog
+    filter: 
+      field: type
+      value: case-study
+    view:
+      fields: [ title, client, pubDatetime ]
+    fields:
+      - { name: type, label: Content Type, type: string, hidden: true, default: "case-study" }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: author, label: Author, type: string, required: true }
+      - { name: pubDatetime, label: Publish Date, type: date, required: true }
+      - { name: modDatetime, label: Modified Date, type: date }
+      - { name: client, label: Client Name, type: string }
+      - { name: industry, label: Industry, type: string }
+      - { name: image, label: Featured Image, type: string }
+      - { name: results, label: Key Results, type: string, hint: "Brief summary of key outcomes" }
+      - { name: excerpt, label: Excerpt, type: string }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: featured, label: Featured, type: boolean, default: false }
+      - { name: draft, label: Draft, type: boolean, default: false }
+      - { name: body, label: Body, type: rich-text }
