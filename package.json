@@ -10,16 +10,11 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.5.4",
-    "@dotlottie/player-component": "^2.7.12",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.8.1",
-    "postmark": "^4.0.5",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
-    "dprint": "^0.50.0",
-    "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.12.3",
     "wrangler": "^4.19.1"
   }
 }
